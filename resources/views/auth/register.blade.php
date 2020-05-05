@@ -1,11 +1,38 @@
 @extends('layouts.app')
+<link href="{{ asset('../node_modules/bootstrap-scss/bootstrap.scss') }}" rel="stylesheet">
+
+
+@include('template.welcome.header')
+
+<div class="page-top-section">
+    <div class="overlay"></div>
+    <div class="container text-right">
+        <div class="page-info">
+            <h2>Services</h2>
+            <div class="page-links">
+                <a href="{{route('welcome')}}">Home</a>
+                <span>Register</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+
+
+<div class="services-section spad">
+    <div class="container">
+        <div class="section-title dark">
+            <h2>Get in <span>the Lab</span> and see the services</h2>
+        </div>
+        <div class="row">
+
+      
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -62,8 +89,13 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="text-center mt-5">
+
+                                {{-- <div class="text-center">
+                                    <a href="" class="site-btn">Browse</a>
+                                </div> --}}
+
+                                <button type="submit" class="site-btn mt-5">
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -72,6 +104,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    
 </div>
 @endsection
