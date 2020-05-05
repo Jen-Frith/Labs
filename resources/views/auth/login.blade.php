@@ -1,12 +1,31 @@
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
 @extends('layouts.app')
+@include('template.welcome.header')
+
+<div class="page-top-section">
+    <div class="overlay"></div>
+    <div class="container text-right">
+        <div class="page-info">
+            <h2>Services</h2>
+            <div class="page-links">
+                <a href="{{route('welcome')}}">Home</a>
+                <span>Login</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+
+
+<div class="services-section spad">
+    <div class="container">
+        <div class="section-title dark">
+            <h2>Get in <span>the Lab</span> and see the services</h2>
+        </div>
+        <div class="row">
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -42,19 +61,19 @@
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
+                                <div class="form-check d-flex justify-content-start">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label" for="remember">
+                                    <label class="form-check-label mr-5 pl-5" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="form-group row mb-0  d-flex justify-content-center">
+                            <div class="col-md-8 offset-md-4 mt-5">
+                                <button type="submit" class="site-btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
 
@@ -67,7 +86,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            
         </div>
     </div>
 </div>

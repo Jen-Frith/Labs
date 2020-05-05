@@ -1,5 +1,5 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
 @extends('layouts.app')
-<link href="{{ asset('../node_modules/bootstrap-scss/bootstrap.scss') }}" rel="stylesheet">
 
 
 @include('template.welcome.header')
@@ -88,14 +88,14 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="text-center mt-5">
+                        <div class="form-group row mb-0 d-flex justify-content-center">
+                            <div class=" ml-5 mt-5">
 
                                 {{-- <div class="text-center">
                                     <a href="" class="site-btn">Browse</a>
                                 </div> --}}
 
-                                <button type="submit" class="site-btn mt-5">
+                                <button type="submit" class="site-btn  mt-5">
                                     {{ __('Register') }}
                                 </button>
                             </div>

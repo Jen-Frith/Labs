@@ -1,5 +1,34 @@
 @extends('layouts.app')
 
+
+
+
+
+
+
+
+
+@include('template/welcome/preloader')
+@include('template/welcome/header')
+@include('template/welcome/introCarousel')
+@include('template/welcome/about')
+@include('template/welcome/testimonials')
+@include('template/welcome/services')
+@include('template/welcome/team')
+@include('template/welcome/promotion')
+@include('template/welcome/contact')
+@include('template/welcome/footer')
+
+
+
+
+
+
+{{-- 
+
+
+@extends('layouts.app')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -21,4 +50,4 @@
     </div>
 </div>
 @endsection
-
+ --}}
