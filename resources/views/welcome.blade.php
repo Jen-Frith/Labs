@@ -12,4 +12,3 @@
 @include('template/welcome/contact')
 @include('template/welcome/footer')
 
-<H1>Hello</H1>

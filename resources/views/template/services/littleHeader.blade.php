@@ -5,7 +5,7 @@
         <div class="page-info">
             <h2>Services</h2>
             <div class="page-links">
-                <a href="#">Home</a>
+                <a href="{{route('welcome')}}">Home</a>
                 <span>Services</span>
             </div>
         </div>

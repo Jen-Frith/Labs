@@ -23,9 +23,7 @@ Route::get('/elements', function () {return view('elements');})->name('elements'
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');})->name('welcome');
 
 Auth::routes();
 
