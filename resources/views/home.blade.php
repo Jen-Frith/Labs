@@ -1,14 +1,16 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
+@extends('adminlte::page')
+
+@section('content')
+    
+@endsection
 
 
 
 
 
 
-
-
-
-@include('template/welcome/preloader')
+{{-- @include('template/welcome/preloader')
 @include('template/welcome/header')
 @include('template/welcome/introCarousel')
 @include('template/welcome/about')
@@ -17,7 +19,7 @@
 @include('template/welcome/team')
 @include('template/welcome/promotion')
 @include('template/welcome/contact')
-@include('template/welcome/footer')
+@include('template/welcome/footer') --}}
 
 
 

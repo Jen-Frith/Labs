@@ -395,6 +395,14 @@ ul {
 /*------------------------
 	About section
 --------------------------*/
+.abouts-sections {
+	background: #6a23b5;
+	position: relative;
+	z-index: 2;
+}
+
+
+
 .about-section,
 .team-section {
 	background: #6a23b5;

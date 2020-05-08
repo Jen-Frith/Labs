@@ -12,3 +12,4 @@ require('./js/main');
 require('./js/map');
 
 
+require('./ownEdits');

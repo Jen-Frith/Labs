@@ -3,11 +3,22 @@
 		<div class="overlay"></div>
 		<div class="container text-right">
 			<div class="page-info">
-				<h2>Blog</h2>
+@if ($link==null)
+<h2>Elements</h2>
+<div class="page-links">
+	<a href="{{route('welcome')}}">Home</a>
+	<span>Elements</span>
+</div>
+
+@else
+	<h2>{{$link->linkTitle4}}</h2>
 				<div class="page-links">
 					<a href="{{route('welcome')}}">Home</a>
-					<span>Blog</span>
+					<span>{{$link->linkTitle4}}</span>
 				</div>
+@endif
+
+				
 			</div>
 		</div>
 	</div>

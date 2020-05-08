@@ -8,8 +8,23 @@
     </div>
     <!-- slider -->
     <div id="hero-slider" class="owl-carousel">
+
+@if (empty($carousels))
+    
         <div class="item  hero-item" data-bg="img/01.jpg"></div>
         <div class="item  hero-item" data-bg="img/02.jpg"></div>
+@else
+    @foreach ($carousels as $carousel)
+        
+
+<div class="item  hero-item" data-bg="{{asset('storage/'.$carousel->imgCarousel)}}"></div>
+    @endforeach
+
+@endif
+
+    
+    
+    
     </div>
 </div>
 <!-- Intro Section -->

@@ -1,17 +1,35 @@
 	<!-- Header section -->
 	<header class="header-section">
-		<div class="logo">
+		<div class="logo ">
+			@if (empty($logoHeader))
+				
 			<img src="img/logo.png" alt=""><!-- Logo -->
+			@else
+		<img class="" style="width: 50px" src="{{asset('storage/'.$logoHeader->logoHeader)}}" alt=""><!-- Logo -->
+	
+			@endif
 		</div>
 		<!-- Navigation -->
 		<div class="responsive"><i class="fas fa-bars"></i></div>
 		<nav>
 			<ul class="menu-list">
-				<li class="active"><a href="{{route('welcome')}}">Home</a></li>
+@if ($link ?? ''==null)
+		<li class="active"><a href="{{route('welcome')}}">Home</a></li>
 				<li><a href="{{route('services')}}">Services</a></li>
 				<li><a href="{{route('blog')}}">Blog</a></li>
 				<li><a href="{{route('contact')}}">Contact</a></li>
 				<li><a href="{{route('elements')}}">Elements</a></li>
+@else
+
+				<li class="active"><a href="{{route('welcome')}}">Home</a></li>
+				<li><a href="{{route('services')}}">{{$link ?? ''->linkTitle1}}</a></li>
+				<li><a href="{{route('blog')}}">{{$link ?? ''->linkTitle2}}</a></li>
+				<li><a href="{{route('contact')}}">{{$link ?? ''->linkTitle3}}</a></li>
+				<li><a href="{{route('elements')}}">{{$link ?? ''->linkTitle4}}</a></li>	
+@endif
+			
+
+
 
 
 
