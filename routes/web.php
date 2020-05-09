@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Link;
 use App\LogoHeader;
 use App\Carousel;
+use App\Presentation;
+use App\Testimonial;
+use App\Service;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -50,8 +54,15 @@ Route::get('/', function () {
     $link=Link::find(1);
     $logoHeader=LogoHeader::find(1);
     $carousels=Carousel::all();
+    $presentation=Presentation::find(1);
+    $testimonials=Testimonial::all();
+    $services=Service::all();
+    $randoms=Service::all();
+    $randoms = Service::orderByRaw('RAND()')->take(3)->get();
 
-    return view('welcome', compact('link', 'logoHeader', 'carousels'));})->name('welcome');
+
+    return view('welcome', compact('link', 'logoHeader', 'carousels', 'presentation',
+                                'testimonials', 'services','randoms'));})->name('welcome');
 
 //---------------------------------
 
@@ -76,3 +87,14 @@ Route::post('/admin/logoHeader/update', 'LogoHeaderController@update')->name('lo
 
 // CRUD du carousel
 Route::resource('/admin/carousel', 'CarouselController');
+
+// Mini Crud PRESENTATION
+Route::get('/admin/presentation', 'PresentationController@index')->name('presentation');
+Route::post('/admin/presentation/store', 'PresentationController@store')->name('presentation.store');
+Route::post('/admin/presentation/update', 'PresentationController@update')->name('presentation.update');
+
+// CRUD du Testimonial
+Route::resource('/admin/testimonial', 'TestimonialController');
+
+// CRUD du Service
+Route::resource('/admin/services', 'ServiceController');

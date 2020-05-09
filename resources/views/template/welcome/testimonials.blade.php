@@ -1,4 +1,8 @@
+	
 	<!-- Testimonial section -->
+	@if (empty($testimonials))
+		
+	
 	<div class="testimonial-section pb100">
 		<div class="test-overlay"></div>
 		<div class="container">
@@ -98,3 +102,44 @@
 		</div>
 	</div>
 	<!-- Testimonial section end-->
+@else
+
+
+<div class="testimonial-section pb100">
+	<div class="test-overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-4">
+				<div class="section-title left">
+					<h2>What our clients say</h2>
+				</div>
+				<div class="owl-carousel" id="testimonial-slide">
+					<!-- single testimonial -->
+					@foreach ($testimonials as $testimonial)
+						
+					
+					<div class="testimonial">
+						<span>‘​‌‘​‌</span>
+						<p>{{$testimonial->message}}</p>
+						<div class="client-info">
+							<div class="avatar">
+								<img src="{{asset('storage/'.$testimonial->img)}}" alt="">
+							</div>
+							<div class="client-name">
+								<h2>{{$testimonial->name}}</h2>
+								<p>{{$testimonial->function}}</p>
+							</div>
+						</div>
+					</div>@endforeach
+					<!-- single testimonial -->
+					
+					
+		
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Testimonial section end-->
+@endif

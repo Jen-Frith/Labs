@@ -10,3 +10,13 @@ $("input:text").each(function(index, element) {
 
 
 
+
+
+//   let addSpan
+// window.addSpan=()=>{
+ 
+// let input1= document.getElementById('input1').value;
+// input1.innerHTML='<span></span>';
+
+// }
+

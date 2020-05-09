@@ -297,6 +297,25 @@ return [
                     'url' => 'admin/carousel'
         
                 ],
+                [
+                    'text'       => 'Presentation',
+                    'icon_color' => 'green',
+                    'url' => 'admin/presentation'
+        
+                ],
+
+                [
+                    'text'       => 'Testimonials',
+                    'icon_color' => 'white',
+                    'url' => 'admin/testimonial'
+        
+                ],
+                [
+                    'text'       => 'Services',
+                    'icon_color' => 'white',
+                    'url' => 'admin/services'
+        
+                ],
 
                 [
                     'text'    => 'level_one',

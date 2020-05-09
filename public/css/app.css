@@ -8064,3 +8064,8 @@ readers do not read off random characters that represent icons */
   padding-left: 12px;
 }
 
+.bg-span {
+  background-color: #2be6ab;
+  color: black;
+}
+
