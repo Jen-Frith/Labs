@@ -34,23 +34,38 @@
 
       
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
 
+                <div class="card-body">
+                    <form method="POST" action="{{ route('register') }}" enctype="">
+                        @csrf
+                 
+                 
+                 
+                         {{-- <div class="form-roup row">
+                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
+                                    
+
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" name="avatar">
+                    </div>
+        
+        </div>  --}}
+        
+                        
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
+                            
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
+                                
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
+                   
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -88,6 +103,12 @@
                             </div>
                         </div>
 
+
+
+                        {{-- <div class="form-group row"><label for=”type” class="col-md-4 col-form-label text-md-right" >User Type:</label><div class="pl-4 col-md-6"><select class=”form-control” name='type' id=”type”><option value='admin'>Admin</option><option value='super_admin'>Super Admin</option><option value='member'>Member</option></select></div></div> --}}
+
+
+                        
                         <div class="form-group row mb-0 d-flex justify-content-center">
                             <div class=" ml-5 mt-5">
 

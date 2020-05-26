@@ -312,11 +312,28 @@ return [
                 ],
                 [
                     'text'       => 'Services',
-                    'icon_color' => 'white',
+                    'icon_color' => 'orange',
                     'url' => 'admin/services'
         
                 ],
-
+                [
+                    'text'       => 'Team',
+                    'icon_color' => 'black',
+                    'url' => 'admin/team'
+        
+                ],
+                [
+                    'text'       => 'Ready',
+                    'icon_color' => 'white',
+                    'url' => 'admin/ready'
+        
+                ],
+                [
+                    'text'       => 'Contact',
+                    'icon_color' => 'purple',
+                    'url' => 'admin/contact'
+        
+                ],
                 [
                     'text'    => 'level_one',
                     'url'     => '#',
@@ -350,19 +367,21 @@ return [
 
 // FIINN MULTIPAGE--------------
         [
-            'text'       => 'Title links',
+            'text'       => 'Blog',
             'icon_color' => 'red',
-            'url' => 'admin/link'
+            'url' => 'admin/post'
         ],
         [
-            'text'       => 'Logo',
+            'text'       => 'Service',
             'icon_color' => 'yellow',
-            'url' => 'admin/logoHeader'
+            'url' => 'admin/imgFeatures'
 
         ],
         [
-            'text'       => 'information',
+            'text'       => 'Users',
             'icon_color' => 'cyan',
+            'url' => 'admin/users/index'
+
         ],
     ],
 

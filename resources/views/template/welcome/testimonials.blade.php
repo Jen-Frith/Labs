@@ -1,6 +1,6 @@
 	
 	<!-- Testimonial section -->
-	@if (empty($testimonials))
+	@if (empty($testimonial))
 		
 	
 	<div class="testimonial-section pb100">

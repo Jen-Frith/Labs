@@ -53,11 +53,11 @@
   
 
 <input type="radio" value= "fas fa-plane" name="icon"><i class="pr-4 fas fa-plane"></i>
-<input type="radio" value= "fas fa-boat" name="icon"><i class="pr-4 fas fa-truck"></i>
-<input type="radio" value= "fas fa-auto" name="icon"><i class="pr-4 fas fa-car"></i>
+<input type="radio" value= "fas fa-truck" name="icon"><i class="pr-4 fas fa-truck"></i>
+<input type="radio" value= "fas fa-car" name="icon"><i class="pr-4 fas fa-car"></i>
 <input type="radio" value= "fas fa-taxi" name="icon"><i class="pr-4 fas fa-taxi"></i>
   
-<input type="radio" value= "far fa-grin-tears" name="icon"><<i class="far fa-grin-tears"></i>
+<input type="radio" value= "far fa-grin-tears" name="icon"><i class="far fa-grin-tears"></i>
 <input type="radio" value= "fas fa-coffee" name="icon"><i class="pr-4 fas fa-coffee"></i>
 <input type="radio" value= "fas fa-star" name="icon"><i class="pr-4 fas fa-star"></i>
 <input type="radio" value= "fas fa-lemon" name="icon"><i class="pr-4 fas fa-lemon"></i>

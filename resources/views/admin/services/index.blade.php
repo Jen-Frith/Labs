@@ -29,9 +29,16 @@
       </tr>
     </thead>
     <tbody>
-      @foreach($services as $service)
+      @foreach($services as $key=>$service )
       <tr>
-        <td>{{$service->id}}</td>
+        <td>
+              
+          @php
+            
+            echo ($key)
+            @endphp      
+     
+        </td>
 
  <td><i class="{{$service->icon}}"></i></td>
  <td>{{$service->title}}</td>

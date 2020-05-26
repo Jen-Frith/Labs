@@ -1,12 +1,13 @@
 	<!-- features section -->
-	<div class="team-section spad">
+	<div id="featuresService" class="team-section spad">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="section-title">
 				<h2>Get in <span>the Lab</span> and  discover the world</h2>
 			</div>
 			<div class="row">
-				<!-- feature item -->
+				@if ($services==null)
+						<!-- feature item -->
 				<div class="col-md-4 col-sm-4 features">
 					<div class="icon-box light left">
 						<div class="service-text">
@@ -74,11 +75,55 @@
 							<h2>SMART MARKETING</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur ad ipiscing elit. Curabitur leo est, feugiat nec</p>
 						</div>
+					</div>	
+				@else
+				
+				<div class="col-md-4 col-sm-4 features">
+@foreach ($lastsfirsts as $service)
+
+	<div class="icon-box light">
+	<div class="icon">
+		<i class="{{$service->icon}}"></i>
+	</div>
+	<div class="service-text">
+		<h2>{{$service->title}}</h2>
+	<p>{{$service->description}}</p>
+	</div>
+</div>
+@endforeach
+		</div>
+
+				<!-- Devices -->
+				<div class="col-md-4 col-sm-4 devices">
+					<div class="text-center">
+						{{-- <img src="{{img/device.png}}" alt=""> --}}
+						<img style="height: 490; width:240px;" src="{{asset('storage/'.$feature->img)}}" alt="">
+
 					</div>
 				</div>
+
+
+<div class="col-md-4 col-sm-4 features">
+				@foreach ($lastslasts as $service)
+				<div class="icon-box light">
+					<div class="icon">
+						<i class="{{$service->icon}}"></i>
+					</div>
+					<div class="service-text">
+						<h2>{{$service->title}}</h2>
+					<p>{{$service->description}}</p>
+					</div>
+				</div>
+				@endforeach
 			</div>
-			<div class="text-center mt100">
-				<a href="" class="site-btn">Browse</a>
+				@endif
+		
+				</div>
+			</div>
+
+
+			<div class="text-center">
+				<a href="#header" class="site-btn">Browse</a>
 			</div>
 		</div>
 	</div>
